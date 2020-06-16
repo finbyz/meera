@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include meera *.css
+recursive-include meera *.csv
+recursive-include meera *.html
+recursive-include meera *.ico
+recursive-include meera *.js
+recursive-include meera *.json
+recursive-include meera *.md
+recursive-include meera *.png
+recursive-include meera *.py
+recursive-include meera *.svg
+recursive-include meera *.txt
+recursive-exclude meera *.pyc
