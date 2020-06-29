@@ -86,10 +86,16 @@ app_license = "MIT"
 # 		"on_trash": "method"
 #	}
 # }
+doctype_js = {
+	"Sales Order": "public/js/doctype_js/sales_order.js"
+}
 
 doc_events = {
 	"Sales Invoice": {
 		"before_naming": "meera.meera.doc_events.sales_invoice.before_naming"
+	},
+	"Sales Order": {
+		"before_naming": "meera.api.before_naming"
 	}
 }
 
