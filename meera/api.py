@@ -20,7 +20,6 @@ def before_naming(self, method):
 		if self.get('series_value'):
 			if self.series_value > 0:
 				name = naming_series_name(self.naming_series, fiscal, self.company_series, self.month)
-				frappe.msgprint(str(name))
 				check = frappe.db.get_value('Series', name, 'current', order_by="name")
 				#frappe.msgprint(str(check))
 				if check == 0:
@@ -44,7 +43,6 @@ def naming_series_name(name, fiscal, company_series=None, month=None):
 	name = name.replace('fiscal', str(fiscal))
 	name = name.replace('#', '')
 	name = name.replace('.', '')
-	frappe.msgprint(str(name))
 	return name
 
 @frappe.whitelist()
@@ -52,7 +50,7 @@ def check_counter_series(name, company_series = None, date = None, month=None):
 	if not date:
 		date = datetime.date.today()
 	
-	date = self.get("transaction_date") or self.get("posting_date") or  self.get("manufacturing_date") or  self.get("date") or getdate()
+
 	month = datetime.datetime.strptime(date,'%Y-%m-%d').date().strftime('%B').upper()
 
 	fiscal = get_fiscal(date)
