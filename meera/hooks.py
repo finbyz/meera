@@ -139,3 +139,9 @@ doc_events = {
 # 	"Task": "meera.task.get_dashboard_data"
 # }
 
+# e invoice override
+import erpnext
+
+from meera.einvoice_override import update_invoice_taxes,get_invoice_value_details
+erpnext.regional.india.e_invoice.utils.update_invoice_taxes = update_invoice_taxes
+erpnext.regional.india.e_invoice.utils.get_invoice_value_details = get_invoice_value_details
