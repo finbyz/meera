@@ -142,6 +142,7 @@ doc_events = {
 # e invoice override
 import erpnext
 
-from meera.einvoice_override import update_invoice_taxes,get_invoice_value_details
+from meera.e_invoice_override import update_invoice_taxes, get_invoice_value_details, make_einvoice
 erpnext.regional.india.e_invoice.utils.update_invoice_taxes = update_invoice_taxes
 erpnext.regional.india.e_invoice.utils.get_invoice_value_details = get_invoice_value_details
+erpnext.regional.india.e_invoice.utils.make_einvoice = make_einvoice
